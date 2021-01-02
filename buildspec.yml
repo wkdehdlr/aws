@@ -12,5 +12,11 @@ phases:
       - pwd
 artifacts:
   files:
-    - '**/*'
+    - build/libs/*.jar
+    - appspec.yml
+    - scripts/**
   name: myname-$(date +%Y-%m-%d_%H:%M:%S)
+  discard-paths: yes
+cache:
+  paths:
+    - '/root/.gradle/caches/**/*'
