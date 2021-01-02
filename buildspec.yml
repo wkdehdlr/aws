@@ -12,5 +12,9 @@ phases:
       - pwd
 artifacts:
   files:
-    - '**/*'
+    - build/libs/*.jar
   name: myname-$(date +%Y-%m-%d_%H:%M:%S)
+  discard-paths: yes
+cache:
+  paths:
+    - '/root/.gradle/caches/**/*'
