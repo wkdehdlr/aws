@@ -3,6 +3,7 @@ BUILD_JAR=$(ls /home/ec2-user/build/*.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 PROFILE=$(</home/ec2-user/profile.txt)
 chmod +x /home/ec2-user/build/start.sh
+chmod +x /home/ec2-user/build/stop.sh
 echo "> build 파일명: $JAR_NAME" >> /home/ec2-user/deploy/deploy.log
 
 echo "> build 파일 복사" >> /home/ec2-user/deploy/deploy.log
